@@ -1,0 +1,25 @@
+[gd_scene load_steps=2 format=3 uid="uid://khk035n71rbu"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_11bux"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_11bux")
+
+[node name="Start" type="Button" parent="."]
+offset_left = 64.0
+offset_right = 272.0
+offset_bottom = 79.0
+text = "Start"
+metadata/_edit_use_anchors_ = true
+
+[node name="Quit" type="Button" parent="."]
+offset_left = 64.0
+offset_top = 88.0
+offset_right = 272.0
+offset_bottom = 167.0
+tooltip_text = "Quit the game"
+text = "Quit"
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
