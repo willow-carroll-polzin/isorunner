@@ -122,6 +122,7 @@ script = ExtResource("1_743dt")
 shape = SubResource("CapsuleShape2D_16l5k")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(0, -8)
 sprite_frames = SubResource("SpriteFrames_f6blm")
-animation = &"Crouch"
+animation = &"Run"
+
+[node name="Camera2D" type="Camera2D" parent="."]
