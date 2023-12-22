@@ -111,7 +111,7 @@ shape = SubResource("RectangleShape2D_q187l")
 position = Vector2(1, -11)
 sprite_frames = SubResource("SpriteFrames_xdlj5")
 animation = &"Idle"
-frame_progress = 0.643068
+frame_progress = 0.931933
 
 [node name="PlayerDetectionArea" type="Area2D" parent="."]
 position = Vector2(-57.1189, -28.4062)
@@ -121,3 +121,4 @@ position = Vector2(57.1189, 18.4062)
 shape = SubResource("CircleShape2D_ifxyw")
 
 [connection signal="body_entered" from="PlayerDetectionArea" to="." method="_on_player_detection_area_body_entered"]
+[connection signal="body_exited" from="PlayerDetectionArea" to="." method="_on_player_detection_area_body_exited"]

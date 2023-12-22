@@ -527,8 +527,13 @@ position = Vector2(1816, -16)
 shape = SubResource("RectangleShape2D_oo0td")
 metadata/_edit_lock_ = true
 
-[node name="Player" parent="." instance=ExtResource("1_wi1y3")]
-position = Vector2(72, 390)
+[node name="Player" type="Node2D" parent="."]
+position = Vector2(-40, 320)
 
-[node name="Frog" parent="." instance=ExtResource("5_b6fe1")]
+[node name="Player" parent="Player" instance=ExtResource("1_wi1y3")]
+position = Vector2(112, 70)
+
+[node name="Mobs" type="Node2D" parent="."]
 position = Vector2(311, 390)
+
+[node name="Frog" parent="Mobs" instance=ExtResource("5_b6fe1")]
