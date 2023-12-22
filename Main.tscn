@@ -8,26 +8,25 @@
 script = ExtResource("1_e5kg3")
 
 [node name="Start" type="Button" parent="."]
-offset_left = 440.0
+offset_left = 496.0
 offset_top = 240.0
-offset_right = 648.0
+offset_right = 704.0
 offset_bottom = 319.0
 text = "Start"
 metadata/_edit_use_anchors_ = true
 
 [node name="Quit" type="Button" parent="."]
-offset_left = 440.0
+offset_left = 496.0
 offset_top = 432.0
-offset_right = 648.0
+offset_right = 704.0
 offset_bottom = 511.0
 tooltip_text = "Quit the game"
 text = "Quit"
-metadata/_edit_use_anchors_ = true
 
 [node name="Settings" type="Button" parent="."]
-offset_left = 440.0
+offset_left = 496.0
 offset_top = 336.0
-offset_right = 648.0
+offset_right = 704.0
 offset_bottom = 416.0
 text = "Settings"
 

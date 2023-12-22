@@ -6,13 +6,12 @@ func _ready():
 	pass # Replace with function body.
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
+# Called every frame. 'delta' is1152 the elapsed time since the previous frame.
 func _process(_delta):
 	pass
 
-
 func _on_quit_pressed():
-	print("aaaa")
+	print("slut")
 	get_tree().quit()
 
 

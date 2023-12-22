@@ -7,44 +7,52 @@
 [node name="ParallaxBackground" type="ParallaxBackground"]
 script = ExtResource("1_vdfjt")
 
-[node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+[node name="Background" type="ParallaxLayer" parent="."]
 position = Vector2(170, -13)
 motion_scale = Vector2(0.7, 0.7)
 motion_mirroring = Vector2(1152, 0)
 
-[node name="Back" type="Sprite2D" parent="ParallaxLayer"]
-position = Vector2(406, 333)
+[node name="Back" type="Sprite2D" parent="Background"]
+position = Vector2(-170, 13)
 scale = Vector2(3, 2.66667)
 texture = ExtResource("1_i5ff4")
+centered = false
 
-[node name="ParallaxLayer2" type="ParallaxLayer" parent="."]
+[node name="Foreground" type="ParallaxLayer" parent="."]
 position = Vector2(170, -13)
 motion_mirroring = Vector2(1208, 0)
 
-[node name="Middle" type="Sprite2D" parent="ParallaxLayer2"]
-position = Vector2(-82, 469)
+[node name="Middle" type="Sprite2D" parent="Foreground"]
+position = Vector2(-170, 285)
 texture = ExtResource("2_upkcd")
+centered = false
 
-[node name="Middle2" type="Sprite2D" parent="ParallaxLayer2"]
-position = Vector2(86, 469)
+[node name="Middle2" type="Sprite2D" parent="Foreground"]
+position = Vector2(-2, 285)
 texture = ExtResource("2_upkcd")
+centered = false
 
-[node name="Middle3" type="Sprite2D" parent="ParallaxLayer2"]
-position = Vector2(262, 469)
+[node name="Middle3" type="Sprite2D" parent="Foreground"]
+position = Vector2(174, 285)
 texture = ExtResource("2_upkcd")
+centered = false
 
-[node name="Middle4" type="Sprite2D" parent="ParallaxLayer2"]
-position = Vector2(430, 469)
+[node name="Middle4" type="Sprite2D" parent="Foreground"]
+position = Vector2(342, 285)
 texture = ExtResource("2_upkcd")
+centered = false
 
-[node name="Middle5" type="Sprite2D" parent="ParallaxLayer2"]
-position = Vector2(606, 469)
+[node name="Middle5" type="Sprite2D" parent="Foreground"]
+position = Vector2(518, 285)
 texture = ExtResource("2_upkcd")
+centered = false
 
-[node name="Middle6" type="Sprite2D" parent="ParallaxLayer2"]
-position = Vector2(774, 469)
+[node name="Middle6" type="Sprite2D" parent="Foreground"]
+position = Vector2(686, 285)
 texture = ExtResource("2_upkcd")
+centered = false
 
-[node name="Middle7" type="Sprite2D" parent="ParallaxLayer2"]
-position = Vector2(950, 469)
+[node name="Middle7" type="Sprite2D" parent="Foreground"]
+position = Vector2(862, 285)
 texture = ExtResource("2_upkcd")
+centered = false
