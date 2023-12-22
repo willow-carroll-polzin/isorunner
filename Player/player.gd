@@ -35,5 +35,11 @@ func _physics_process(delta):
 			player_animation.play("Idle")
 		if velocity.y > 0: #In the air and falling
 			player_animation.play("Fall")
+	
+	# Handle moving backwards (left) and forwards (right)
+	if direction == -1:
+		get_node("AnimatedSprite2D").flip_h = true
+	elif direction == 1:
+		get_node("AnimatedSprite2D").flip_h = false
 
 	move_and_slide()

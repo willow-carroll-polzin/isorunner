@@ -22,8 +22,7 @@
 [ext_resource type="Texture2D" uid="uid://dg6eopk7asqvl" path="res://GraphicAssets/Player/run/player-run-6.png" id="19_xdtgg"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_16l5k"]
-radius = 16.0
-height = 32.0
+height = 26.0
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_f6blm"]
 animations = [{
@@ -250,6 +249,7 @@ tracks/1/keys = {
 [sub_resource type="Animation" id="Animation_7k72r"]
 resource_name = "Idle"
 length = 0.7
+loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -345,19 +345,21 @@ _data = {
 script = ExtResource("1_743dt")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, -11)
 shape = SubResource("CapsuleShape2D_16l5k")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -16)
 sprite_frames = SubResource("SpriteFrames_f6blm")
 animation = &"Idle"
 frame = 1
+metadata/_edit_lock_ = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(0, -127)
 zoom = Vector2(1.6, 1.6)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_0muhe")
 }
-
-[node name="AnimationTree" type="AnimationTree" parent="."]
