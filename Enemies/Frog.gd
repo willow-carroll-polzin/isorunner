@@ -1,9 +1,8 @@
 extends CharacterBody2D
 
 var SPEED = 50
+var GRAVITY = ProjectSettings.get_setting("physics/2d/default_gravity") # Get the GRAVITY from the project settings to be synced with RigidBody nodes.
 
-# Get the gravity from the project settings to be synced with RigidBody nodes.
-var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var player
 var direction
 var chase_flag = false # Not chasing the player if false
@@ -21,15 +20,21 @@ func _on_player_detection_area_body_exited(body):
 		chase_flag = false
 
 func _physics_process(delta):
-	# Add gravity
-	velocity.y += gravity * delta
+	# Add GRAVITY
+	velocity.y += GRAVITY * delta
+
+	print(direction)
 	
 	# Check if we need to chase the player
 	if chase_flag == true:
 		# Determine direction to player
 		player = get_node("../../Player/Player")
-		direction = (player.position - self.position).normalized() 
-	
+		print("self pre: ", str(self.position))
+		print("pre: ", str(player.position))
+		direction = (self.position-player.position).normalized() 
+		print("self post: ", str(self.position))
+		print("pre: ", str(player.position))
+		
 		if direction.x > 0: # On the right of the player
 			get_node("AnimatedSprite2D").flip_h = true
 			velocity.x = direction.x * SPEED
