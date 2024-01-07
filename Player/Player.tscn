@@ -345,7 +345,7 @@ _data = {
 script = ExtResource("1_743dt")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-1, -11)
+position = Vector2(0, -12)
 shape = SubResource("CapsuleShape2D_16l5k")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

@@ -1,7 +1,7 @@
 [gd_scene load_steps=20 format=3 uid="uid://ddujm122dl7if"]
 
+[ext_resource type="Script" path="res://Enemies/frog.gd" id="1_6tbey"]
 [ext_resource type="Texture2D" uid="uid://cnkk3bmgalp3y" path="res://GraphicAssets/Enemies/Frog/idle/frog-idle.png" id="1_6yb3i"]
-[ext_resource type="Script" path="res://Enemies/Frog.gd" id="1_rr60v"]
 [ext_resource type="Texture2D" uid="uid://q4vp27jhkimt" path="res://GraphicAssets/Enemies/Enemy-death/enemy-death-1.png" id="1_tvh0h"]
 [ext_resource type="Texture2D" uid="uid://cagiqdwauho36" path="res://GraphicAssets/Enemies/Enemy-death/enemy-death-2.png" id="2_p155i"]
 [ext_resource type="Texture2D" uid="uid://c2qdaqp5mamrr" path="res://GraphicAssets/Enemies/Frog/jump/frog-jump.png" id="2_u5vlv"]
@@ -110,14 +110,14 @@ animations = [{
 radius = 61.0328
 
 [node name="Frog" type="CharacterBody2D"]
-script = ExtResource("1_rr60v")
+script = ExtResource("1_6tbey")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -10)
 shape = SubResource("RectangleShape2D_q187l")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(1, -11)
+position = Vector2(0, -10)
 sprite_frames = SubResource("SpriteFrames_xdlj5")
 animation = &"Idle"
 frame_progress = 0.223236
