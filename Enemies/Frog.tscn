@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://ddujm122dl7if"]
+[gd_scene load_steps=21 format=3 uid="uid://ddujm122dl7if"]
 
 [ext_resource type="Script" path="res://Enemies/frog.gd" id="1_6tbey"]
 [ext_resource type="Texture2D" uid="uid://cnkk3bmgalp3y" path="res://GraphicAssets/Enemies/Frog/idle/frog-idle.png" id="1_6yb3i"]
@@ -61,7 +61,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("6_6e50t")
 }],
-"loop": true,
+"loop": false,
 "name": &"Death",
 "speed": 5.0
 }, {
@@ -107,7 +107,10 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ifxyw"]
-radius = 61.0328
+radius = 98.1275
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ar6r3"]
+size = Vector2(17, 21.5)
 
 [node name="Frog" type="CharacterBody2D"]
 script = ExtResource("1_6tbey")
@@ -119,8 +122,7 @@ shape = SubResource("RectangleShape2D_q187l")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -10)
 sprite_frames = SubResource("SpriteFrames_xdlj5")
-animation = &"Idle"
-frame_progress = 0.223236
+animation = &"Death"
 
 [node name="PlayerDetectionArea" type="Area2D" parent="."]
 position = Vector2(-57.1189, -28.4062)
@@ -129,5 +131,13 @@ position = Vector2(-57.1189, -28.4062)
 position = Vector2(57.1189, 18.4062)
 shape = SubResource("CircleShape2D_ifxyw")
 
+[node name="FrogDeathArea" type="Area2D" parent="."]
+position = Vector2(-57.1189, -28.4062)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FrogDeathArea"]
+position = Vector2(57.1189, 18.1562)
+shape = SubResource("RectangleShape2D_ar6r3")
+
 [connection signal="body_entered" from="PlayerDetectionArea" to="." method="_on_player_detection_area_body_entered"]
 [connection signal="body_exited" from="PlayerDetectionArea" to="." method="_on_player_detection_area_body_exited"]
+[connection signal="body_entered" from="FrogDeathArea" to="." method="_on_player_death_area_body_entered"]
