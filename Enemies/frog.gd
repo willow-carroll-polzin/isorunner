@@ -23,8 +23,7 @@ func _on_player_detection_area_body_exited(body):
 	if body.name == "Player": # If player is detected
 		chase_flag = false
 
-#Check ea
-func _on_player_detection_area_for player collision/kill
+#Check if player is colliding
 func _on_player_death_area_body_entered(body):
 	if body.name == "Player": #Player is colliding with hitbox
 		get_node("AnimatedSprite2D").play("Death")

@@ -15,6 +15,16 @@ run/main_scene="res://Main.tscn"
 config/features=PackedStringArray("4.2", "Mobile")
 config/icon="res://icon.svg"
 
+[file_customization]
+
+folder_colors={
+"res://Enemies/": "red",
+"res://GraphicAssets/": "blue",
+"res://Music/": "pink",
+"res://Pickups/": "green",
+"res://Player/": "yellow"
+}
+
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0

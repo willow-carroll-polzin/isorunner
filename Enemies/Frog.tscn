@@ -43,22 +43,22 @@ region = Rect2(70, 0, 35, 32)
 [sub_resource type="SpriteFrames" id="SpriteFrames_xdlj5"]
 animations = [{
 "frames": [{
-"duration": 1.0,
+"duration": 0.5,
 "texture": ExtResource("1_tvh0h")
 }, {
-"duration": 1.0,
+"duration": 0.5,
 "texture": ExtResource("2_p155i")
 }, {
-"duration": 1.0,
+"duration": 0.5,
 "texture": ExtResource("3_mverg")
 }, {
-"duration": 1.0,
+"duration": 0.5,
 "texture": ExtResource("4_r2c5u")
 }, {
-"duration": 1.0,
+"duration": 0.5,
 "texture": ExtResource("5_m08tg")
 }, {
-"duration": 1.0,
+"duration": 0.5,
 "texture": ExtResource("6_6e50t")
 }],
 "loop": false,
